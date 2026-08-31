@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — MASTER M&A</title>
+  <meta name="description" content="Vertel kort waar u staat. In een verkennend gesprek bepalen we welke beslissing eerst moet worden genomen.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="master">MASTER</span><span class="amp">M&amp;A</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+    <div class="nav-menu">
+      <a href="waarde.html">Waarde</a>
+      <a href="kopen.html">Kopen</a>
+      <a href="verkopen.html">Verkopen</a>
+      <a href="aandeelhouders.html">Aandeelhouders</a>
+      <a href="continuiteit.html">Continuïteit</a>
+      <a href="diensten.html">Diensten &amp; prijzen</a>
+      <a href="inzichten.html">Inzichten</a>
+      <a href="over-ons.html">Over ons</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="hero">
+  <div class="container-narrow">
+    <span class="eyebrow">— Contact</span>
+    <h1>Wat moet er vandaag <em>beslist</em> worden?</h1>
+    <p class="lead">Beschrijf kort uw onderneming en situatie. We bekijken of een verkennend gesprek zinvol is en welke informatie daarvoor nodig is.</p>
+  </div>
+</header>
+
+<section style="padding-top: 0;">
+  <div class="container">
+    <div class="grid grid-2" style="gap: clamp(40px, 5vw, 72px); align-items: start;">
+      <div>
+        <h3 style="margin-bottom: 24px;">Bericht versturen</h3>
+        <form class="form" action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST">
+          <div class="form-row">
+            <label for="name">Naam en voornaam <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-row">
+            <label for="company">Onderneming <span class="required">*</span></label>
+            <input type="text" id="company" name="company" required>
+          </div>
+          
+          <div class="form-row">
+            <label for="kbo">Ondernemingsnummer (KBO)</label>
+            <input type="text" id="kbo" name="kbo" placeholder="0XXX.XXX.XXX">
+          </div>
+          
+          <div class="form-row">
+            <label for="email">E-mail <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-row">
+            <label for="phone">Telefoon <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          
+          <div class="form-row">
+            <label for="topic">Mijn vraag <span class="required">*</span></label>
+            <select id="topic" name="topic" required>
+              <option value="">— Maak een keuze —</option>
+              <option value="waarde">Waarde — wat is mijn bedrijf waard?</option>
+              <option value="kopen">Kopen — ik wil een bedrijf overnemen</option>
+              <option value="verkopen">Verkopen — ik wil mijn bedrijf verkopen</option>
+              <option value="aandeelhouders">Aandeelhouders — kwestie tussen aandeelhouders</option>
+              <option value="continuiteit">Continuïteit — financiële druk of herstructurering</option>
+              <option value="anders">Anders — leg uit in bericht</option>
+            </select>
+          </div>
+          
+          <div class="form-row">
+            <label for="message">Korte omschrijving van de situatie <span class="required">*</span></label>
+            <textarea id="message" name="message" required placeholder="Vertel kort waar u vandaag staat. Vermeld geen vertrouwelijke juridische informatie over tegenpartijen."></textarea>
+          </div>
+          
+          <div class="form-row">
+            <label for="timing">Gewenste timing of urgentie</label>
+            <select id="timing" name="timing">
+              <option value="">— Maak een keuze —</option>
+              <option value="urgent">Urgent — binnen enkele dagen</option>
+              <option value="soon">Snel — binnen 1 tot 4 weken</option>
+              <option value="planning">Planning — binnen 1 tot 6 maanden</option>
+              <option value="exploring">Verkennen — nog geen concrete timing</option>
+            </select>
+          </div>
+          
+          <div class="form-check">
+            <input type="checkbox" id="privacy" name="privacy_consent" required>
+            <label for="privacy">Ik heb de <a href="privacy.html" target="_blank">privacyverklaring</a> gelezen en ga akkoord met de verwerking van mijn gegevens voor het beantwoorden van deze aanvraag. <span class="required">*</span></label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-arrow">Bericht versturen</button>
+          <p style="font-size: 13px; color: var(--ink-soft); margin-top: 8px;">We reageren binnen twee werkdagen. Alle gesprekken vertrouwelijk.</p>
+        </form>
+      </div>
+      
+      <div>
+        <h3 style="margin-bottom: 24px;">Direct contact</h3>
+        
+        <div style="background: var(--bg-pure); border: 1px solid var(--line); padding: clamp(28px, 3vw, 40px);">
+          <div style="margin-bottom: 28px;">
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); margin-bottom: 8px;">Telefoon</div>
+            <a href="tel:+32475954681" style="font-family: var(--font-display); font-size: 22px; color: var(--ink);">+32 475 95 46 81</a>
+          </div>
+          
+          <div style="margin-bottom: 28px;">
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); margin-bottom: 8px;">E-mail</div>
+            <a href="mailto:ruben@masterma.be" style="font-family: var(--font-display); font-size: 22px; color: var(--ink);">ruben@masterma.be</a>
+          </div>
+          
+          <div>
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); margin-bottom: 8px;">LinkedIn</div>
+            <a href="https://www.linkedin.com/company/67766425" target="_blank" rel="noopener">MASTER M&amp;A op LinkedIn ↗</a>
+          </div>
+        </div>
+        
+        <div class="independence-block" style="margin-top: 32px;">
+          <h4>Privacy en routing</h4>
+          <p>Dit formulier wordt uitsluitend ontvangen door MASTER M&amp;A. Vermeld in deze eerste fase geen vertrouwelijke juridische informatie over een tegenpartij. Wenst u rechtstreeks juridisch advies, gebruik dan de contactpagina op de website van MASTER Advocaten.</p>
+          <p style="margin-top: 12px;"><a href="https://masteradvocaten.be" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 500;">Naar MASTER Advocaten ↗</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="master">MASTER</span><span class="amp">M&amp;A</span>
+        </a>
+        <p>Financieel-strategisch advies voor KMO-eigenaars bij waardering, overname, verkoop, aandeelhouderskwesties en continuïteit.</p>
+        <div class="company-info">
+          [BEDRIJFSNAAM]<br>
+          [STRAAT + NUMMER]<br>
+          [POSTCODE + GEMEENTE]<br>
+          BTW: [BTW-NUMMER]<br>
+          <a href="tel:+32475954681">+32 475 95 46 81</a> · 
+          <a href="mailto:ruben@masterma.be">ruben@masterma.be</a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Beslissingen</h4>
+        <ul>
+          <li><a href="waarde.html">Waarde</a></li>
+          <li><a href="kopen.html">Kopen</a></li>
+          <li><a href="verkopen.html">Verkopen</a></li>
+          <li><a href="aandeelhouders.html">Aandeelhouders</a></li>
+          <li><a href="continuiteit.html">Continuïteit</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>MASTER M&amp;A</h4>
+        <ul>
+          <li><a href="diensten.html">Diensten &amp; prijzen</a></li>
+          <li><a href="werkwijze.html">Werkwijze</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="inzichten.html">Inzichten</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Juridisch</h4>
+        <ul>
+          <li><a href="privacy.html">Privacyverklaring</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="master-advocaten.html">MASTER Advocaten</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-disclaimer">
+      <strong style="color: rgba(255,255,255,0.85);">Onafhankelijke dienstverlening.</strong> MASTER M&amp;A en MASTER Advocaten zijn juridisch en organisatorisch zelfstandige dienstverleners. Een opdracht aan MASTER M&amp;A houdt geen opdracht aan MASTER Advocaten in. Juridische bijstand, het beroepsgeheim van de advocaat en de bijzondere beroepsregels van de advocatuur zijn uitsluitend van toepassing na afzonderlijke aanvaarding van een opdracht door MASTER Advocaten. Gegevens worden niet aan MASTER Advocaten doorgegeven zonder uw toestemming.
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> MASTER M&amp;A — Alle rechten voorbehouden</span>
+      <div class="footer-bottom-links">
+        <a href="https://www.linkedin.com/company/67766425" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://masteradvocaten.be" target="_blank" rel="noopener">masteradvocaten.be ↗</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/shared.js"></script>
+</body>
+</html>
