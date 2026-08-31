@@ -22,6 +22,12 @@
   --accent-tint: #E5EAF1;
   --accent-deep: #142942;
   
+  /* Secondair accent — goud (uit logo, voor waarde-signalen) */
+  --gold: #9A7B32;
+  --gold-light: #B99348;
+  --gold-tint: #F4EEDC;
+  --gold-deep: #7A5F26;
+  
   /* Waarschuwingskleur voor continuïteit-strook */
   --warn: #B85450;
   --warn-tint: #F5E6E4;
@@ -144,7 +150,7 @@ strong { font-weight: 600; }
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--accent);
+  color: var(--gold);
   font-weight: 500;
   margin-bottom: 20px;
   display: block;
@@ -217,6 +223,23 @@ section {
 }
 
 .nav-logo {
+  display: inline-block;
+  line-height: 0;
+}
+
+.nav-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.nav-logo:hover img {
+  opacity: 0.8;
+}
+
+/* Fallback tekstuele logo (niet meer gebruikt na PNG toevoeging, blijft voor compatibiliteit) */
+.nav-logo-text {
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 600;
@@ -227,15 +250,8 @@ section {
   gap: 6px;
 }
 
-.nav-logo .master {
-  font-weight: 500;
-}
-
-.nav-logo .amp {
-  color: var(--accent);
-  font-style: italic;
-  font-weight: 400;
-}
+.nav-logo-text .master { font-weight: 500; }
+.nav-logo-text .amp { color: var(--accent); font-style: italic; font-weight: 400; }
 
 .nav-menu {
   display: flex;
@@ -467,7 +483,7 @@ section {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 13px;
-  color: var(--accent);
+  color: var(--gold);
   margin-bottom: 16px;
   display: block;
 }
@@ -552,7 +568,7 @@ section {
 .product-card .price {
   font-family: var(--font-display);
   font-size: 18px;
-  color: var(--accent);
+  color: var(--gold);
   font-weight: 500;
   letter-spacing: -0.01em;
   margin-bottom: 8px;
@@ -667,7 +683,7 @@ section {
 .price-table .price {
   font-family: var(--font-display);
   font-weight: 500;
-  color: var(--accent);
+  color: var(--gold);
   white-space: nowrap;
 }
 
@@ -949,9 +965,13 @@ section {
 }
 
 .footer-brand .nav-logo {
-  color: white;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   display: inline-block;
+}
+
+.footer-brand .nav-logo img {
+  height: 44px;
+  width: auto;
 }
 
 .footer-brand p {
@@ -1066,7 +1086,7 @@ section {
 }
 
 .proof-item {
-  border-top: 2px solid var(--accent);
+  border-top: 2px solid var(--gold);
   padding-top: 20px;
 }
 
