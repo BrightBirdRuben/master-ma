@@ -1,0 +1,1084 @@
+/* ============================================
+   MASTER M&A — Website stylesheet
+   Versie 1.0 — 31 augustus 2026
+   
+   Gebaseerd op BrightBird design system
+   Accent: Diepblauw #1E3A5F (M&A gravitas)
+   ============================================ */
+
+:root {
+  /* Basiskleuren — warm white / charcoal */
+  --bg: #F8F6F1;
+  --bg-pure: #FFFFFF;
+  --ink: #1F2937;
+  --ink-soft: #4B5563;
+  --ink-muted: #6B7280;
+  --line: #D8D4CC;
+  --line-soft: #E8E4DC;
+  
+  /* Accent — diepblauw MASTER M&A */
+  --accent: #1E3A5F;
+  --accent-light: #345578;
+  --accent-tint: #E5EAF1;
+  --accent-deep: #142942;
+  
+  /* Waarschuwingskleur voor continuïteit-strook */
+  --warn: #B85450;
+  --warn-tint: #F5E6E4;
+  
+  /* Typografie */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Spacing */
+  --container: 1280px;
+  --container-narrow: 900px;
+  --pad-x: clamp(24px, 5vw, 64px);
+  --section-y: clamp(64px, 9vw, 120px);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ============================================
+   TYPOGRAFIE
+   ============================================ */
+
+.serif { font-family: var(--font-display); font-feature-settings: 'ss01'; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(36px, 5.5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: clamp(28px, 3.5vw, 42px);
+}
+
+h3 {
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+p:last-child { margin-bottom: 0; }
+
+em { font-style: italic; }
+strong { font-weight: 600; }
+
+.lead {
+  font-size: clamp(17px, 1.5vw, 19px);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 720px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.section-num {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.muted { color: var(--ink-soft); }
+.small { font-size: 13px; }
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+
+section {
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
+}
+
+.section-divider {
+  border-top: 1px solid var(--line);
+}
+
+.section-head {
+  margin-bottom: clamp(40px, 6vw, 72px);
+  max-width: 760px;
+}
+
+/* ============================================
+   NAVIGATIE
+   ============================================ */
+
+.site-nav {
+  background: rgba(248, 246, 241, 0.94);
+  border-bottom: 1px solid var(--line-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 18px var(--pad-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.nav-logo .master {
+  font-weight: 500;
+}
+
+.nav-logo .amp {
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.nav-menu {
+  display: flex;
+  gap: clamp(12px, 1.6vw, 22px);
+  align-items: center;
+}
+
+.nav-menu a {
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-weight: 400;
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-menu a:hover { color: var(--accent); }
+
+.nav-menu a.cta {
+  background: var(--accent);
+  color: white;
+  padding: 9px 18px;
+  border-radius: 1px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav-menu a.cta:hover {
+  background: var(--accent-light);
+  color: white;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .nav-menu { 
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    padding: 24px var(--pad-x);
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .nav-menu.is-open { display: flex; }
+  .nav-toggle { display: block; }
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero {
+  padding-top: clamp(72px, 10vw, 140px);
+  padding-bottom: clamp(72px, 10vw, 120px);
+}
+
+.hero h1 {
+  margin-bottom: clamp(24px, 3vw, 36px);
+  max-width: 16ch;
+}
+
+.hero .lead {
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.hero h1 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink-soft);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 1px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
+  color: white;
+}
+
+.btn-ghost {
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--ink);
+  color: white;
+}
+
+.btn-arrow::after { content: "→"; font-size: 16px; }
+
+.btn-external::after { content: "↗"; font-size: 14px; margin-left: 4px; }
+
+/* ============================================
+   GRID & CARDS
+   ============================================ */
+
+.grid {
+  display: grid;
+  gap: clamp(20px, 2.5vw, 32px);
+}
+
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+.card {
+  background: var(--bg-pure);
+  border: 1px solid var(--line);
+  padding: clamp(28px, 3vw, 40px);
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+.card-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.card-link {
+  margin-top: 20px;
+  display: inline-block;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.card-link::after { content: " →"; }
+
+/* Cards met accent-bar bovenaan */
+.card-accent {
+  border-top: 2px solid var(--accent);
+  padding-top: clamp(24px, 2.5vw, 32px);
+  background: var(--bg-pure);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding-left: clamp(24px, 2.5vw, 32px);
+  padding-right: clamp(24px, 2.5vw, 32px);
+  padding-bottom: clamp(24px, 2.5vw, 32px);
+}
+
+/* ============================================
+   ROUTES - Homepage 4 primaire beslissingen
+   ============================================ */
+
+.routes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  background: var(--bg-pure);
+}
+
+@media (max-width: 800px) {
+  .routes { grid-template-columns: 1fr; }
+}
+
+.route {
+  padding: clamp(32px, 4vw, 56px);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.route:nth-child(2n) { border-right: none; }
+.route:nth-last-child(-n+2) { border-bottom: none; }
+
+@media (max-width: 800px) {
+  .route { border-right: none; }
+  .route:not(:last-child) { border-bottom: 1px solid var(--line); }
+}
+
+.route .num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.route h3 {
+  font-size: 26px;
+  margin-bottom: 14px;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+}
+
+.route p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.route .arrow-link {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s ease;
+}
+
+.route .arrow-link::after { content: "→"; }
+.route .arrow-link:hover { gap: 14px; }
+
+/* ============================================
+   CONTINUITY BAR - urgente strook
+   ============================================ */
+
+.continuity-bar {
+  background: var(--ink);
+  color: white;
+  padding: clamp(40px, 5vw, 64px);
+  border-left: 4px solid var(--warn);
+}
+
+.continuity-bar h3 {
+  color: white;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.continuity-bar p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 24px;
+  max-width: 700px;
+  font-size: 15px;
+}
+
+.continuity-bar .btn-primary {
+  background: var(--warn);
+}
+
+.continuity-bar .btn-primary:hover {
+  background: #A04440;
+}
+
+/* ============================================
+   PRODUCTEN - Fixed-price cards
+   ============================================ */
+
+.product-card {
+  background: var(--bg-pure);
+  border: 1px solid var(--line);
+  padding: clamp(28px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color 0.2s ease;
+}
+
+.product-card:hover {
+  border-color: var(--accent);
+}
+
+.product-card .price {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.product-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.product-card .subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.product-card ul {
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.product-card ul li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  border-top: 1px solid var(--line-soft);
+}
+
+.product-card ul li:first-child { border-top: none; }
+
+.product-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 6px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.product-card .meta {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-card .meta strong {
+  display: block;
+  color: var(--ink);
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+/* ============================================
+   TABEL - Diensten & prijzen
+   ============================================ */
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 32px;
+  background: var(--bg-pure);
+  border: 1px solid var(--line);
+}
+
+.price-table th,
+.price-table td {
+  padding: 18px 22px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.price-table th {
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 11px;
+  border-bottom: none;
+}
+
+.price-table tr:nth-child(even) td {
+  background: rgba(0, 0, 0, 0.015);
+}
+
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+
+.price-table .prod-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.price-table .price {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .price-table thead { display: none; }
+  .price-table tr {
+    display: block;
+    margin-bottom: 16px;
+    border: 1px solid var(--line);
+    background: var(--bg-pure);
+  }
+  .price-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .price-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    flex-shrink: 0;
+    margin-right: 12px;
+  }
+}
+
+/* ============================================
+   PROCESS - Werkwijze stappen
+   ============================================ */
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  border: 1px solid var(--line);
+  background: var(--bg-pure);
+}
+
+.process-step {
+  padding: clamp(28px, 3vw, 40px);
+  border-right: 1px solid var(--line);
+  position: relative;
+}
+
+.process-step:last-child { border-right: none; }
+
+@media (max-width: 800px) {
+  .process-step {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .process-step:last-child { border-bottom: none; }
+}
+
+.process-step .step-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 1;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.process-step h4 {
+  font-size: 17px;
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+.process-step p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+/* ============================================
+   FAQ / QUESTIONS LIST
+   ============================================ */
+
+.q-list {
+  border-top: 1px solid var(--line);
+}
+
+.q-list li {
+  padding: 20px 0;
+  padding-left: 40px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.q-list li::before {
+  content: "?";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--accent);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* ============================================
+   ONAFHANKELIJKHEIDSBLOK — kritiek voor deontologie
+   ============================================ */
+
+.independence-block {
+  background: var(--accent-tint);
+  border-left: 4px solid var(--accent);
+  padding: clamp(28px, 3vw, 40px);
+  margin: 48px 0;
+}
+
+.independence-block h4 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.independence-block p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+
+.independence-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   CTA BLOK
+   ============================================ */
+
+.cta-block {
+  background: var(--ink);
+  color: white;
+  padding: clamp(56px, 7vw, 96px) clamp(32px, 5vw, 80px);
+  text-align: center;
+}
+
+.cta-block h2 {
+  color: white;
+  margin-bottom: 24px;
+  max-width: 20ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-block .lead {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto 40px;
+}
+
+.cta-block .btn-primary {
+  background: var(--accent);
+}
+
+.cta-block .btn-primary:hover {
+  background: var(--accent-light);
+}
+
+.cta-block .btn-ghost {
+  border-color: white;
+  color: white;
+}
+
+.cta-block .btn-ghost:hover {
+  background: white;
+  color: var(--ink);
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+
+.form {
+  display: grid;
+  gap: 20px;
+  max-width: 640px;
+}
+
+.form-row {
+  display: grid;
+  gap: 8px;
+}
+
+.form-row label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.form-row .required {
+  color: var(--warn);
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 12px 14px;
+  background: var(--bg-pure);
+  border: 1px solid var(--line);
+  border-radius: 1px;
+  color: var(--ink);
+  transition: border-color 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-row textarea {
+  min-height: 140px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.form-check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.form-check input {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.7);
+  padding: clamp(48px, 6vw, 80px) 0 32px;
+  margin-top: var(--section-y);
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.site-footer a:hover {
+  color: white;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.footer-brand .nav-logo {
+  color: white;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 340px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 16px;
+}
+
+.footer-brand .company-info {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+}
+
+.footer-col h4 {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  font-family: var(--font-body);
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  font-size: 14px;
+}
+
+.footer-disclaimer {
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.text-center { text-align: center; }
+.bg-tint { background: var(--accent-tint); }
+.bg-pure { background: var(--bg-pure); }
+.bg-dark { background: var(--ink); color: white; }
+
+.mt-0 { margin-top: 0; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+.mt-6 { margin-top: 48px; }
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: clamp(40px, 5vw, 64px) 0;
+}
+
+.accent-bar {
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 20px;
+}
+
+/* Reveal animatie */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   TRUST BADGES / bewijs
+   ============================================ */
+
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(24px, 3vw, 48px);
+  padding: clamp(40px, 5vw, 64px) 0;
+}
+
+.proof-item {
+  border-top: 2px solid var(--accent);
+  padding-top: 20px;
+}
+
+.proof-item h4 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.proof-item p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
