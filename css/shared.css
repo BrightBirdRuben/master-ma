@@ -216,7 +216,7 @@ section {
 .nav-inner {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 18px var(--pad-x);
+  padding: 20px var(--pad-x);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -228,10 +228,16 @@ section {
 }
 
 .nav-logo img {
-  height: 40px;
+  height: 68px;
   width: auto;
   display: block;
   transition: opacity 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .nav-logo img {
+    height: 54px;
+  }
 }
 
 .nav-logo:hover img {
@@ -970,7 +976,7 @@ section {
 }
 
 .footer-brand .nav-logo img {
-  height: 44px;
+  height: 72px;
   width: auto;
 }
 
