@@ -12,7 +12,7 @@
   
   <link rel="stylesheet" href="css/shared.css">
 </head>
-<body>
+<body class="">
 
 <nav class="site-nav">
   <div class="nav-inner">
@@ -43,61 +43,11 @@
   </div>
 </header>
 
-<!-- LEAD MAGNETS -->
-<section style="padding-top: 0;">
+<!-- CONTENT CLUSTERS -->
+<section style="padding-top: 0;" class="bg-tint">
   <div class="container">
     <div class="section-head">
       <span class="section-num">— 01</span>
-      <h2 class="serif">Praktische tools en gidsen.</h2>
-      <p class="lead">Gratis downloads en online tools om een eerste inschatting te maken.</p>
-    </div>
-    
-    <div class="grid grid-3">
-      <div class="card">
-        <span class="card-num">— Tool</span>
-        <h3>Indicatieve waardecalculator</h3>
-        <p style="margin-top: 12px;">Gratis online tool voor een eerste indicatie van de waarde van uw onderneming. Op basis van EBITDA en sector-multiples. <em>Niet geschikt als officiële waardering.</em></p>
-        <a href="tools/waardecalculator.html" class="card-link">Start calculator</a>
-      </div>
-      <div class="card">
-        <span class="card-num">— Zelftest</span>
-        <h3>Exit Readiness zelftest</h3>
-        <p style="margin-top: 12px;">Twintig vragen die u een score geven op verkoopbaarheid en aandachtspunten. Aan het einde ontvangt u een uitnodiging voor een uitgebreidere scan.</p>
-        <a href="tools/exit-readiness.html" class="card-link">Doe de zelftest</a>
-      </div>
-      <div class="card">
-        <span class="card-num">— Checklist</span>
-        <h3>Ik heb een overnamebod ontvangen</h3>
-        <p style="margin-top: 12px;">Twaalf vragen om te stellen vóór u reageert op een bod of LOI van een koper. Wat betekent de prijs? Wat betekenen de voorwaarden? Wat is redelijk?</p>
-        <a href="docs/bod-checklist.pdf" class="card-link" download>Download PDF</a>
-      </div>
-      <div class="card">
-        <span class="card-num">— Checklist</span>
-        <h3>Aandeelhoudersuitkoop</h3>
-        <p style="margin-top: 12px;">Stapsgewijze checklist voor wie een vennoot wil uitkopen of zelf wil uitstappen. Van waardering tot betaling.</p>
-        <a href="docs/aandeelhoudersuitkoop.pdf" class="card-link" download>Download PDF</a>
-      </div>
-      <div class="card">
-        <span class="card-num">— Template</span>
-        <h3>13-weken cashflowtemplate</h3>
-        <p style="margin-top: 12px;">Excel-sjabloon voor de gedetailleerde cashflow-projectie die u nodig hebt bij continuïteits­druk. Wekelijkse in- en uitstromen, revolving updates.</p>
-        <a href="docs/cashflow-13w.xlsx" class="card-link" download>Download Excel</a>
-      </div>
-      <div class="card">
-        <span class="card-num">— Boek</span>
-        <h3>Slimme startup door overname</h3>
-        <p style="margin-top: 12px;">Het boek van Ruben De Ruyck over ondernemer worden via overname van een bestaand bedrijf. Voor searchers, MBI-kandidaten en aspiring acquirers.</p>
-        <a href="docs/slimme-startup-inleiding.pdf" class="card-link" download>Download inleiding (PDF)</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTENT CLUSTERS -->
-<section class="section-divider bg-tint">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-num">— 02</span>
       <h2 class="serif">Artikels per thema.</h2>
       <p class="lead">Zes clusters die de vragen dekken die eigenaars ons letterlijk stellen. Nieuwe artikels worden regelmatig toegevoegd.</p>
     </div>
@@ -143,16 +93,33 @@
   </div>
 </section>
 
+<!-- SLIMME STARTUP BOEK -->
+<section class="section-divider">
+  <div class="container">
+    <div style="background: var(--bg-pure); border: 1px solid var(--line); padding: clamp(40px, 5vw, 64px);">
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: clamp(32px, 5vw, 64px); align-items: center;">
+        <div style="display: flex; justify-content: center;">
+          <img src="assets/book-slimmestartup.png" alt="Boekcover Slimme Startup Door Overname — Ruben De Ruyck" style="max-width: 100%; height: auto; display: block;">
+        </div>
+        <div>
+          <span class="section-num">— Boek</span>
+          <h2 class="serif" style="margin-bottom: 20px;">Word ondernemer door overname.</h2>
+          <p style="color: var(--ink-soft); margin-bottom: 16px;">"Slimme startup door overname" — geschreven door Ruben De Ruyck — is een praktische gids voor ondernemers die niet vanuit het niets willen starten, maar via overname van een bestaand bedrijf. Voor searchers, MBI-kandidaten en wie acquisition entrepreneurship serieus overweegt.</p>
+          <p style="color: var(--ink-soft); margin-bottom: 24px;">Het boek behandelt de zoektocht, de waardebepaling, de financieringsopties, de juridische valkuilen en de eerste 100 dagen na overname.</p>
+          <a href="docs/slimme-startup-inleiding.pdf" class="btn btn-ghost btn-arrow" download>Download inleiding</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- BUILT2SELL BOEK -->
 <section class="section-divider">
   <div class="container">
     <div style="background: var(--bg-pure); border: 1px solid var(--line); padding: clamp(40px, 5vw, 64px);">
       <div style="display: grid; grid-template-columns: 1fr 2fr; gap: clamp(32px, 5vw, 64px); align-items: center;">
-        <div style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%); color: white; aspect-ratio: 3/4; padding: 32px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); text-align: center;">
-          <div>
-            <div style="font-size: 28px; font-weight: 500; line-height: 1.1;">Built2Sell</div>
-            <div style="font-size: 12px; opacity: 0.85; margin-top: 12px; font-style: italic; line-height: 1.4;">Hoe je bedrijf runnen dat het op ieder moment verkoopbaar is</div>
-          </div>
+        <div style="display: flex; justify-content: center;">
+          <img src="assets/book-built2sell.png" alt="Boekcover Built2Sell — Ruben De Ruyck" style="max-width: 100%; height: auto; display: block;">
         </div>
         <div>
           <span class="section-num">— Aankomend boek</span>
