@@ -1125,3 +1125,139 @@ section {
   color: var(--ink-soft);
   line-height: 1.55;
 }
+
+/* ============================================
+   REFERENTIES — verkochte dossiers
+   ============================================ */
+
+.ref-list {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.ref-card {
+  background: var(--bg-pure);
+  padding: clamp(24px, 3vw, 32px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: start;
+  transition: background 0.2s ease;
+}
+
+.ref-card:hover {
+  background: var(--bg);
+}
+
+.ref-body {
+  min-width: 0;
+}
+
+.ref-eyebrow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.ref-eyebrow .status {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.ref-eyebrow .dot {
+  color: var(--line);
+}
+
+.ref-title {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.ref-facts {
+  display: flex;
+  gap: clamp(16px, 3vw, 32px);
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.ref-facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ref-facts dt {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+}
+
+.ref-facts dd {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.ref-date {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gold);
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .ref-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .ref-date {
+    order: -1;
+    padding-top: 0;
+  }
+}
+
+/* Statistiek blok */
+.ref-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 24px;
+  margin-bottom: clamp(40px, 5vw, 64px);
+  padding: clamp(28px, 3vw, 40px);
+  background: var(--bg-pure);
+  border: 1px solid var(--line);
+}
+
+.ref-stat {
+  text-align: center;
+}
+
+.ref-stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.ref-stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
