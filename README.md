@@ -1,20 +1,16 @@
 # MASTER M&A — Website
 
 ## Versies
-- v1.0 — Initiële bouw
-- v1.1 — MSTRma logo toegevoegd
-- v1.2 — Goud #9A7B32 als secundair accent
-- v1.3 — Nieuw logo met tagline, footer-adres ingevuld
-- v1.4 — Logo vergroot voor leesbare tagline
-- v1.5 — Boekcovers Built2Sell + Slimme Startup toegevoegd
-- v1.6 — Iconen bij drie principes (homepage) + Inzichten herzien
-        (tools sectie verwijderd, boeken 1 & 2 apart getoond)
+- v1.0 t/m v1.9 — zie git history
+- v1.9.1 — Footer adres aangepast naar Aimé Behaeghestraat 15, 8870 Kachtem
+        (maatschappelijke zetel RC2 bv — consistent met juridische pagina's)
 
-## Assets
-- mstrma-logo.png / mstrma-logo-white.png
-- book-slimmestartup.png
-- book-built2sell.png
+## v1.9.1 wijziging
+Alleen één regel in _template.html:
+- Was: Houtskoolstraat 16 / 8800 Roeselare (operationeel bureauadres)
+- Nu: Aimé Behaeghestraat 15 / 8870 Kachtem (maatschappelijke zetel RC2 bv)
+
+Alle 17 pagina's opnieuw gegenereerd omdat de footer overal terugkomt.
 
 ## Nog in te vullen
-- [DATUM] op juridische pagina's
 - REPLACE_WITH_FORMSPREE_ID in contact.html
