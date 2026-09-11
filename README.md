@@ -1,24 +1,18 @@
 # MASTER M&A — Website
 
-## Versies
-- v1.0 t/m v1.9.2 — zie git history
-- v1.9.3 — Formspree Form ID ingevuld (contactformulier is nu LIVE)
+## v2.1.1 — Blog footer fix
 
-## v1.9.3 wijziging
-- contact.html: action="https://formspree.io/f/mgaelydl"
-- Placeholder REPLACE_WITH_FORMSPREE_ID vervangen door echte ID
+De 11 blog-pagina's in /inzichten/ subfolder hebben nu de juiste
+footer met kolommen-layout (voorheen: alles onder elkaar door
+verkeerde CSS class-namen in het blog template).
 
-## Contactformulier
-Aanvragen worden verzonden naar deruyck@masterma.be
-via Formspree Form ID: mgaelydl
+Wat was fout: het blog-template gebruikte `.footer-inner`,
+`.footer-top` en `.footer-col` maar de CSS herkent enkel
+`.container` (buiten) + `.footer-grid` (grid) + `.footer-brand`
+(kolom class). Alle 11 blog-pagina's zijn opnieuw gegenereerd
+met de correcte footer-structuur (zelfde als homepage en andere
+top-level pagina's, met "../" prefix voor de subfolder).
 
-## Volgende stap na deployment
-1. Ga naar masterma.be/contact.html
-2. Vul het formulier één keer in als test ("test — negeren")
-3. Verzend
-4. Check deruyck@masterma.be voor Formspree confirmatie-mail
-5. Klik op "Confirm your email" in die mail
-6. Vanaf dan werken alle volgende contact-aanvragen automatisch
-
-## Alles voltooid
-Er zijn geen placeholders meer in de website.
+## Wat te uploaden
+De 11 bestanden in /inzichten/ vervangen in GitHub. De andere
+pagina's hoeven niet vervangen te worden.
