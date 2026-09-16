@@ -123,7 +123,7 @@
   panel.setAttribute('aria-labelledby', 'analytics-consent-title');
   panel.hidden = true;
   panel.innerHTML = '<h2 id="analytics-consent-title">Uw keuze voor statistieken</h2>' +
-    '<p>Met uw toestemming gebruiken we Google Analytics om bezoeken en contactklikken te meten. ' +
+    '<p>Met uw toestemming gebruiken we Google Analytics om bezoeken, contactklikken en geslaagde formulieraanvragen te meten. ' +
     'U kunt de website ook zonder deze statistieken gebruiken. Uw keuze kunt u onderaan elke pagina wijzigen.</p>' +
     '<a class="analytics-policy">Meer over cookies</a>' +
     '<div class="analytics-consent-actions"><button type="button" data-consent="denied">Statistieken weigeren</button>' +
@@ -168,6 +168,11 @@
     const href = link.getAttribute('href');
     const method = /^mailto:/i.test(href) ? 'email' : /^tel:/i.test(href) ? 'phone' : null;
     if (method) window.gtag('event', 'contact_click', { contact_method: method });
+  });
+
+  document.addEventListener('masterma:contact-success', function () {
+    if (choice !== 'granted' || !loaded || window['ga-disable-' + measurementId]) return;
+    window.gtag('event', 'generate_lead', { form_id: 'contact', method: 'contact_form' });
   });
 
   window.addEventListener('storage', function (event) {
