@@ -34,8 +34,8 @@
       }
       completed = true;
       form.reset();
-      status.textContent = 'Bedankt. Uw bericht is ontvangen. We reageren binnen twee werkdagen.';
-      button.textContent = 'Bericht ontvangen';
+      status.textContent = 'Bedankt voor uw aanvraag. Ruben neemt binnen twee werkdagen persoonlijk contact met u op. Indien gewenst spreken we samen een moment af.';
+      button.textContent = 'Aanvraag ontvangen';
       document.dispatchEvent(new CustomEvent('masterma:contact-success'));
     } catch (_) {
       status.textContent = 'We konden de ontvangst niet bevestigen. Uw bericht kan toch verzonden zijn. Uw ingevulde gegevens blijven staan. Neem bij twijfel telefonisch contact op, of probeer via Formspree opnieuw.';
@@ -46,7 +46,7 @@
       form.removeAttribute('aria-busy');
       if (!completed) {
         button.disabled = false;
-        button.textContent = 'Bericht versturen';
+        button.textContent = 'Vraag een gesprek aan';
       }
       status.focus();
     }
