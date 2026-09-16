@@ -1,3 +1,8 @@
+#contact-fallback[hidden] { display: none; }
+#contact-form button:disabled { opacity: 0.65; cursor: default; }
+#contact-form { grid-template-columns: minmax(0, 1fr); }
+#contact-form .form-row { min-width: 0; grid-template-columns: minmax(0, 1fr); }
+#contact-form input, #contact-form textarea, #contact-form select { min-width: 0; max-width: 100%; }
 /* ============================================
    MASTER M&A — Website stylesheet
    Versie 1.0 — 31 augustus 2026
