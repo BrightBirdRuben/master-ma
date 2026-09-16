@@ -89,7 +89,7 @@
     <div class="grid grid-2" style="gap: clamp(40px, 5vw, 72px); align-items: start;">
       <div>
         <h3 style="margin-bottom: 24px;">Bericht versturen</h3>
-        <form class="form" action="https://formspree.io/f/mgaelydl" method="POST">
+        <form id="contact-form" class="form" action="https://formspree.io/f/mgaelydl" method="POST">
           <div class="form-row">
             <label for="name">Naam en voornaam <span class="required">*</span></label>
             <input type="text" id="name" name="name" required>
@@ -150,6 +150,8 @@
           </div>
           
           <button type="submit" class="btn btn-primary btn-arrow">Bericht versturen</button>
+          <p id="contact-status" role="status" aria-live="polite" tabindex="-1" style="margin-top: 16px;"></p>
+          <button id="contact-fallback" type="submit" class="btn btn-ghost" hidden>Opnieuw proberen via Formspree</button>
           <p style="font-size: 13px; color: var(--ink-soft); margin-top: 8px;">We reageren binnen twee werkdagen. Alle gesprekken vertrouwelijk.</p>
         </form>
       </div>
@@ -250,5 +252,6 @@
 </footer>
 
 <script src="js/shared.js"></script>
+<script src="js/contact.js"></script>
 </body>
 </html>
