@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — MASTER M&A</title>
-  <meta name="description" content="Vertel kort waar u staat. In een verkennend gesprek bepalen we welke beslissing eerst moet worden genomen.">
+  <meta name="description" content="Plan een discreet gesprek met Ruben De Ruyck over uw onderneming. Bel, mail of laat uw gegevens achter. We spreken samen een geschikt moment af.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="MASTER M&amp;A">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact — MASTER M&amp;A">
-  <meta property="og:description" content="Vertel kort waar u staat. In een verkennend gesprek bepalen we welke beslissing eerst moet worden genomen.">
+  <meta property="og:description" content="Plan een discreet gesprek met Ruben De Ruyck over uw onderneming. Bel, mail of laat uw gegevens achter. We spreken samen een geschikt moment af.">
   <meta property="og:url" content="https://www.masterma.be/contact.html">
   <meta property="og:image" content="https://www.masterma.be/assets/mstrma-logo.png">
   <meta property="og:image:type" content="image/png">
@@ -26,7 +26,7 @@
   <meta property="og:image:alt" content="Logo van MASTER M&amp;A">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Contact — MASTER M&amp;A">
-  <meta name="twitter:description" content="Vertel kort waar u staat. In een verkennend gesprek bepalen we welke beslissing eerst moet worden genomen.">
+  <meta name="twitter:description" content="Plan een discreet gesprek met Ruben De Ruyck over uw onderneming. Bel, mail of laat uw gegevens achter. We spreken samen een geschikt moment af.">
   <meta name="twitter:image" content="https://www.masterma.be/assets/mstrma-logo.png">
   <meta name="twitter:image:alt" content="Logo van MASTER M&amp;A">
   <script type="application/ld+json">
@@ -38,7 +38,7 @@
       "@id": "https://www.masterma.be/contact.html#webpage",
       "url": "https://www.masterma.be/contact.html",
       "name": "Contact — MASTER M&A",
-      "description": "Vertel kort waar u staat. In een verkennend gesprek bepalen we welke beslissing eerst moet worden genomen.",
+      "description": "Plan een discreet gesprek met Ruben De Ruyck over uw onderneming. Bel, mail of laat uw gegevens achter. We spreken samen een geschikt moment af.",
       "inLanguage": "nl-BE",
       "isPartOf": {
         "@id": "https://www.masterma.be/#website"
@@ -79,8 +79,8 @@
 <header class="hero">
   <div class="container-narrow">
     <span class="eyebrow">— Contact</span>
-    <h1>Wat moet er vandaag <em>beslist</em> worden?</h1>
-    <p class="lead">Beschrijf kort uw onderneming en situatie. We bekijken of een verkennend gesprek zinvol is en welke informatie daarvoor nodig is.</p>
+    <h1>Een discreet gesprek <em>begint hier.</em></h1>
+    <p class="lead">Een vraag over de waarde of toekomst van uw onderneming? Bel of mail Ruben rechtstreeks, of laat uw contactgegevens achter. We plannen samen een geschikt moment om uw situatie confidentieel te bespreken.</p>
   </div>
 </header>
 
@@ -88,60 +88,39 @@
   <div class="container">
     <div class="grid grid-2" style="gap: clamp(40px, 5vw, 72px); align-items: start;">
       <div>
-        <h3 style="margin-bottom: 24px;">Bericht versturen</h3>
+        <h3 style="margin-bottom: 24px;">Vraag een gesprek aan</h3>
         <form id="contact-form" class="form" action="https://formspree.io/f/mgaelydl" method="POST">
           <div class="form-row">
             <label for="name">Naam en voornaam <span class="required">*</span></label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-row">
-            <label for="company">Onderneming <span class="required">*</span></label>
-            <input type="text" id="company" name="company" required>
-          </div>
-          
-          <div class="form-row">
-            <label for="kbo">Ondernemingsnummer (KBO)</label>
-            <input type="text" id="kbo" name="kbo" placeholder="0XXX.XXX.XXX">
+            <input type="text" id="name" name="name" autocomplete="name" required>
           </div>
           
           <div class="form-row">
             <label for="email">E-mail <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required>
           </div>
           
           <div class="form-row">
-            <label for="phone">Telefoon <span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" required>
+            <label for="phone">Telefoon (optioneel)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
           </div>
           
           <div class="form-row">
-            <label for="topic">Mijn vraag <span class="required">*</span></label>
-            <select id="topic" name="topic" required>
-              <option value="">— Maak een keuze —</option>
+            <label for="topic">Mijn vraag gaat over… (optioneel)</label>
+            <select id="topic" name="topic">
+              <option value="">Kies eventueel een onderwerp</option>
               <option value="waarde">Waarde — wat is mijn bedrijf waard?</option>
               <option value="kopen">Kopen — ik wil een bedrijf overnemen</option>
               <option value="verkopen">Verkopen — ik wil mijn bedrijf verkopen</option>
               <option value="aandeelhouders">Aandeelhouders — kwestie tussen aandeelhouders</option>
               <option value="continuiteit">Continuïteit — financiële druk of herstructurering</option>
-              <option value="anders">Anders — leg uit in bericht</option>
+              <option value="anders">Iets anders</option>
             </select>
           </div>
           
           <div class="form-row">
-            <label for="message">Korte omschrijving van de situatie <span class="required">*</span></label>
-            <textarea id="message" name="message" required placeholder="Vertel kort waar u vandaag staat. Vermeld geen vertrouwelijke juridische informatie over tegenpartijen."></textarea>
-          </div>
-          
-          <div class="form-row">
-            <label for="timing">Gewenste timing of urgentie</label>
-            <select id="timing" name="timing">
-              <option value="">— Maak een keuze —</option>
-              <option value="urgent">Urgent — binnen enkele dagen</option>
-              <option value="soon">Snel — binnen 1 tot 4 weken</option>
-              <option value="planning">Planning — binnen 1 tot 6 maanden</option>
-              <option value="exploring">Verkennen — nog geen concrete timing</option>
-            </select>
+            <label for="message">Korte toelichting (optioneel)</label>
+            <textarea id="message" name="message" placeholder="Wat wilt u graag bespreken? U mag dit ook tijdens ons gesprek toelichten."></textarea>
           </div>
           
           <div class="form-check">
@@ -149,15 +128,15 @@
             <label for="privacy">Ik heb de <a href="privacy.html" target="_blank">privacyverklaring</a> gelezen en ga akkoord met de verwerking van mijn gegevens voor het beantwoorden van deze aanvraag. <span class="required">*</span></label>
           </div>
           
-          <button type="submit" class="btn btn-primary btn-arrow">Bericht versturen</button>
+          <button type="submit" class="btn btn-primary btn-arrow">Vraag een gesprek aan</button>
           <p id="contact-status" role="status" aria-live="polite" tabindex="-1" style="margin-top: 16px;"></p>
           <button id="contact-fallback" type="submit" class="btn btn-ghost" hidden>Opnieuw proberen via Formspree</button>
-          <p style="font-size: 13px; color: var(--ink-soft); margin-top: 8px;">We reageren binnen twee werkdagen. Alle gesprekken vertrouwelijk.</p>
+          <p style="font-size: 13px; color: var(--ink-soft); margin-top: 8px;">Ruben neemt binnen twee werkdagen persoonlijk contact met u op. We spreken samen een geschikt moment af.</p>
         </form>
       </div>
       
       <div>
-        <h3 style="margin-bottom: 24px;">Direct contact</h3>
+        <h3 style="margin-bottom: 24px;">Rechtstreeks met Ruben</h3>
         
         <div style="background: var(--bg-pure); border: 1px solid var(--line); padding: clamp(28px, 3vw, 40px);">
           <div style="margin-bottom: 28px;">
@@ -177,7 +156,7 @@
         </div>
         
         <div class="independence-block" style="margin-top: 32px;">
-          <h4>Privacy en routing</h4>
+          <h4>Discreet en onafhankelijk</h4>
           <p>Dit formulier wordt uitsluitend ontvangen door MASTER M&amp;A. Vermeld in deze eerste fase geen vertrouwelijke juridische informatie over een tegenpartij. Wenst u rechtstreeks juridisch advies, gebruik dan de contactpagina op de website van MASTER Advocaten.</p>
           <p style="margin-top: 12px;"><a href="https://masteradvocaten.be" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 500;">Naar MASTER Advocaten ↗</a></p>
         </div>
