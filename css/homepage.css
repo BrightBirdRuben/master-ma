@@ -1,0 +1,51 @@
+/* Alleen de homepage: bestaande huisstijl en navigatie behouden. */
+.home-hero { padding: 64px 0 0; }
+.home-intro { display:grid; grid-template-columns:1.1fr 1fr; gap:48px; align-items:center; }
+.home-copy h1 { font-size:clamp(36px,3.45vw,54px); line-height:1.12; letter-spacing:-.035em; max-width:700px; margin:20px 0 24px; }
+.home-copy .lead { font-size:17px; line-height:1.75; max-width:590px; }
+.home-assurance { font-size:13px; color:var(--ink-soft); margin:22px 0; }
+.home-copy .btn-row { gap:20px; margin-top:26px; }
+.home-copy .btn { padding:15px 19px; font-size:13px; }
+.home-secondary { font-size:13px; border-bottom:1px solid var(--line); padding:8px 0; }
+.home-photo { margin:0; min-width:0; }
+.home-photo-frame { position:relative; aspect-ratio:1.05; overflow:hidden; background:var(--bg); }
+.home-photo-frame::after {
+ content:""; position:absolute; inset:0; pointer-events:none;
+ background:
+  linear-gradient(to right,var(--bg) 0%,rgba(248,246,241,.9) 5%,rgba(248,246,241,.45) 17%,rgba(248,246,241,0) 38%),
+  linear-gradient(to bottom,var(--bg) 0%,rgba(248,246,241,0) 12%,rgba(248,246,241,0) 85%,var(--bg) 100%),
+  linear-gradient(to left,var(--bg) 0%,rgba(248,246,241,0) 7%);
+}
+.home-photo img { width:100%; height:125%; max-width:none; object-fit:cover; object-position:70% top; display:block; }
+.home-photo figcaption { display:flex; justify-content:space-between; gap:16px; font-size:11px; color:var(--ink-soft); line-height:1.7; padding-top:14px; }
+.home-photo figcaption a { white-space:nowrap; }
+.home-proof { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-top:54px; padding:27px 0; }
+.home-proof>div { padding:0 24px; border-right:1px solid var(--line); }
+.home-proof>div:first-child { padding-left:0; }
+.home-proof>div:last-child { border:0; }
+.home-proof strong { display:block; font-family:var(--font-display); font-size:26px; font-weight:500; }
+.home-proof span { font-size:12px; color:var(--ink-soft); }
+.home-references { padding:64px 0 72px; }
+.home-section-title { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:28px; }
+.home-section-title h2 { font-size:clamp(27px,2.6vw,38px); max-width:680px; line-height:1.2; margin-top:12px; }
+.home-section-title>a { white-space:nowrap; font-size:13px; }
+.home-cases,.home-products { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.home-cases article { border:1px solid var(--line); background:var(--bg-pure); padding:28px; display:flex; flex-direction:column; }
+.home-case-tag { font-size:10px; letter-spacing:.1em; color:var(--accent); }
+.home-cases h3 { font-family:var(--font-display); font-size:24px; line-height:1.2; margin:18px 0 12px; }
+.home-cases p { font-size:12px; color:var(--ink-soft); margin-bottom:24px; }
+.home-case-value { margin-top:auto; padding-top:16px; border-top:1px solid var(--line-soft); font-size:19px; }
+.home-case-value span { display:block; font-size:11px; color:var(--ink-soft); margin-top:4px; }
+.home-discretion { font-size:12px; color:var(--ink-soft); margin-top:18px; }
+.home-products .product-card { display:flex; flex-direction:column; }
+.home-products .product-card h3 { margin:18px 0; }
+.home-products .product-card p { font-size:15px; margin-bottom:24px; }
+.home-products .card-link { margin-top:auto; }
+@media(max-width:1050px) { .home-intro{gap:28px;} .home-photo figcaption{display:block;} .home-proof>div{padding:0 15px;} }
+@media(max-width:760px) {
+ .home-photo-frame::after { background:linear-gradient(to bottom,var(--bg),rgba(248,246,241,0) 22%,rgba(248,246,241,0) 83%,var(--bg)),linear-gradient(to right,var(--bg),rgba(248,246,241,0) 9%,rgba(248,246,241,0) 93%,var(--bg)); }
+ .home-hero{padding-top:36px;} .home-intro{grid-template-columns:1fr;gap:32px;} .home-copy h1{font-size:38px;} .home-photo-frame{aspect-ratio:1.3;} .home-photo img{height:128%;object-position:65% top;}
+ .home-proof{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px;} .home-proof>div,.home-proof>div:first-child{padding:0 12px;border:0;} .home-proof strong{font-size:23px;}
+ .home-section-title{display:block;} .home-section-title>a{display:inline-block;margin-top:20px;} .home-cases,.home-products{grid-template-columns:1fr;} .home-references{padding-top:44px;}
+}
+@media(max-width:380px){.home-copy h1{font-size:33px;}.home-copy .btn{font-size:12px;padding:14px;}}
