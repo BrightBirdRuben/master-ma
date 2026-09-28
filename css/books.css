@@ -1,0 +1,16 @@
+.book-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(28px,5vw,64px);align-items:start}
+.book-cover{display:block;width:100%;max-width:290px;height:auto;margin:0 auto;box-shadow:0 16px 35px #18345120}
+.book-form{margin-top:24px;max-width:560px;min-width:0}
+.book-form .form-row{min-width:0}
+.book-form input[type=email]{width:100%;min-width:0;box-sizing:border-box}
+.book-form .form-check{font-size:13px;line-height:1.6}
+.book-note{font-size:13px;color:var(--ink-soft);line-height:1.6}
+.book-status{font-size:15px;line-height:1.6;scroll-margin-top:100px}
+.book-status:empty{display:none}
+.book-form button:disabled{opacity:.65;cursor:default}
+.book-form [hidden]{display:none!important}
+.book-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+#slimme-startup,#the-sellable-company{scroll-margin-top:110px}
+@media(max-width:700px){.book-layout{grid-template-columns:minmax(0,1fr)}.book-cover{max-width:210px}.book-form button{white-space:normal}}
+
+.book-cover-3d{box-shadow:none}
