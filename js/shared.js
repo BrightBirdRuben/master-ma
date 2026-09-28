@@ -175,6 +175,13 @@
     window.gtag('event', 'generate_lead', { form_id: 'contact', method: 'contact_form' });
   });
 
+  document.addEventListener('masterma:book-success', function (event) {
+    if (choice !== 'granted' || !loaded || window['ga-disable-' + measurementId]) return;
+    const bookId = event.detail && event.detail.bookId;
+    if (!['slimme-startup', 'the-sellable-company'].includes(bookId)) return;
+    window.gtag('event', bookId === 'slimme-startup' ? 'book_request' : 'book_interest', { book_id: bookId });
+  });
+
   window.addEventListener('storage', function (event) {
     if (event.key !== storageKey && event.key !== null) return;
     choice = readChoice();
